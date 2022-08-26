@@ -2,10 +2,15 @@ import { useEffect, useState } from "react";
 import "../styles/App.scss";
 import getDataApi from "../services/fetch";
 import ListCharacter from "./ListCharacter";
+import Filters from "./Filters";
+import FilterByHouse from "./FilterByHouse";
 
 function App() {
   //const [renderList, setRenderList] = useState(getDataApi);
+
+  //variables estado
   const [dataChar, setDataChar] = useState([]);
+  const [FilterByHouse, setFilterByHouse] = useState("all");
 
   //const htmlCharc = renderList.map((item) => {
   //return;
@@ -17,7 +22,9 @@ function App() {
       setDataChar(getDataApi);
     });
   }, []);
-
+  const handleFilterByHouse = (value) => {
+    setFilterByHouse(value);
+  };
   return (
     <div className="App">
       <header>
@@ -34,17 +41,10 @@ function App() {
               id="character"
             />
           </label>
-          <label htmlFor="house">
-            Buscar por casa
-            <select>
-              <option value="all">Todos</option>
-              <option value="Ross">Roos</option>
-              <option value="Rachel">Rachel</option>
-              <option value="Joey">Joey</option>
-              <option value="Phoebe">Phoebe</option>
-              <option></option>
-            </select>
-          </label>
+          <Filters
+            FilterHouse={FilterByHouse}
+            handleFilterByHouse={handleFilterByHouse}
+          />
         </form>
         <ListCharacter dataChar={dataChar}></ListCharacter>
       </main>
