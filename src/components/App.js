@@ -4,7 +4,7 @@ import getDataApi from "../services/fetch";
 import ListCharacter from "./ListCharacter";
 import Filters from "./Filters";
 import CharactDetail from "./CharactDetail";
-import { Route, Routes } from "react-router-dom";
+import { matchPath, Route, Routes, useLocation } from "react-router-dom";
 
 function App() {
   //variables estado
@@ -22,34 +22,39 @@ function App() {
       setDataChar(getDataApi);
     });
   }, []);
+
   const handleFilterByHouse = (value) => {
     setFilterByHouse(value);
   };
 
-  const houseFilter = dataChar.filter((user) => {
-    if (filterByHouse === "all") {
-      return true;
-    } else {
-      return user.house === filterByHouse;
-    }
-  });
+  const houseFilter = dataChar
+    .filter((user) => {
+      if (filterByHouse === "all") {
+        return true;
+      } else {
+        return user.house === filterByHouse;
+      }
+    })
+    .filter((user) => {
+      return user.name.toLowerCase().includes(filterName.toLowerCase());
+    });
 
   const handleFilterName = (ev) => {
     setFilterName(ev.target.value);
   };
 
-  const nameFilter = dataChar.filter((user) => {
-    return user.name.toLowerCase().includes(filterName.toLowerCase());
-  });
+  //const nameFilter = dataChar.filter((user) => {
+  //return user.name.toLowerCase().includes(filterName.toLowerCase());
+  //});
 
   //detalle personaje
 
   const { pathname } = useLocation();
-  const dataPath = matchPatch("/user/:userId", pathname);
+  const dataPath = matchPath("/user/:userId", pathname);
 
   const userId = dataPath !== null ? dataPath.params.userId : null;
   const userFound = dataChar.find((user) => {
-    return user.id === userId;
+    return user.id === parseInt(userId);
   });
 
   return (
@@ -58,12 +63,13 @@ function App() {
         <h1> Harry Potter</h1>
       </header>
 
-      <main>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              {" "}
+              <main>
                 <Filters
                   filterByHouse={filterByHouse}
                   handleFilterByHouse={handleFilterByHouse}
@@ -73,20 +79,21 @@ function App() {
                 />
 
                 <ListCharacter
+                  //dataChar={dataChar}
                   dataChar={houseFilter}
                   filterName={filterName}
-                  nameFilter={nameFilter}
+                  //nameFilter={nameFilter}
                   handleFilterName={handleFilterName}
                 />
-              </>
-            }
-          />
-          <Route
-            path="/user/:userId"
-            element={<CharactDetail user={userFound} />}
-          ></Route>
-        </Routes>
-      </main>
+              </main>
+            </>
+          }
+        />
+        <Route
+          path="/user/:userId"
+          element={<CharactDetail user={userFound} />}
+        />
+      </Routes>
     </div>
   );
 }

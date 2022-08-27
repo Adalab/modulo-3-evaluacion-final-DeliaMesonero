@@ -1,6 +1,6 @@
 function FilterName(props) {
   const handleFilterName = (ev) => {
-    handleFilterName(ev.taget.toLowerCase.value);
+    props.handleFilterName(ev.taget.value);
   };
   return (
     <label htmlFor="character">

@@ -1,7 +1,12 @@
+import { Link } from "react-router-dom";
+
 function CharactDetail(props) {
   return (
-    <section>
-      <a href="">
+    <>
+      <section>
+        <Link to="/">
+          <p>Home</p>
+        </Link>
         <img
           src={props.user.image}
           alt={`Foto de ${props.user.name}`}
@@ -9,8 +14,8 @@ function CharactDetail(props) {
         ></img>
         <h4> {props.user.name}</h4>
         <p>{props.user.species} </p>
-      </a>
-    </section>
+      </section>
+    </>
   );
 }
 export default CharactDetail;
