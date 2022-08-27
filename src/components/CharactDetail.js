@@ -1,9 +1,7 @@
-import { Link } from "react-router-dom";
-
-const CharacterCard = (props) => {
+function CharactDetail(props) {
   return (
-    <li>
-      <Link to={`/user/${props.user.id}`}>
+    <section>
+      <a href="">
         <img
           src={props.user.image}
           alt={`Foto de ${props.user.name}`}
@@ -11,8 +9,8 @@ const CharacterCard = (props) => {
         ></img>
         <h4> {props.user.name}</h4>
         <p>{props.user.species} </p>
-      </Link>
-    </li>
+      </a>
+    </section>
   );
-};
-export default CharacterCard;
+}
+export default CharactDetail;

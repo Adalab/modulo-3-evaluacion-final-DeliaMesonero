@@ -10,6 +10,7 @@ function getDataApi() {
               : user.image,
           name: user.name,
           species: user.species,
+          house: user.house,
         };
       });
       return dataClean;
