@@ -11,6 +11,7 @@ function App() {
   const [dataChar, setDataChar] = useState([]);
   const [filterByHouse, setFilterByHouse] = useState("Gryffindor");
   const [filterName, setFilterName] = useState("");
+  const [filterByGender, setFilterByGender] = useState("all");
 
   //const htmlCharc = renderList.map((item) => {
   //return;
@@ -37,12 +38,21 @@ function App() {
     })
     .filter((user) => {
       return user.name.toLowerCase().includes(filterName.toLowerCase());
+    })
+    .filter((user) => {
+      if (filterByGender === "all") {
+        return true;
+      } else {
+        return user.house === filterByGender;
+      }
     });
 
   const handleFilterName = (ev) => {
     setFilterName(ev.target.value);
   };
-
+  const handleFilterByGender = (value) => {
+    setFilterByGender(value);
+  };
   //const nameFilter = dataChar.filter((user) => {
   //return user.name.toLowerCase().includes(filterName.toLowerCase());
   //});
@@ -75,6 +85,8 @@ function App() {
                   handleFilterByHouse={handleFilterByHouse}
                   filterName={filterName}
                   handleFilterName={handleFilterName}
+                  filterByGender={filterByGender}
+                  handleFilterByGender={handleFilterByGender}
                   //nameFilter={nameFilter}
                 />
 
@@ -84,6 +96,8 @@ function App() {
                   filterName={filterName}
                   //nameFilter={nameFilter}
                   handleFilterName={handleFilterName}
+                  //filterByGender={filterByGender}
+                  //handleFilterByGender={handleFilterByGender}
                 />
               </main>
             </>

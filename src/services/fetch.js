@@ -11,6 +11,7 @@ function getDataApi() {
           name: user.name,
           species: user.species,
           house: user.house,
+          gender: user.gender,
         };
       });
       return dataClean;
