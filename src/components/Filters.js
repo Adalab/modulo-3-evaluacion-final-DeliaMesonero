@@ -11,7 +11,7 @@ function Filters(props) {
       <FilterName
         filterName={props.filterName}
         handleFilterName={props.handleFilterName}
-        nameFilter={props.nameFilter}
+        //nameFilter={props.nameFilter}
       />
     </form>
   );

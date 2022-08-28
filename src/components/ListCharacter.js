@@ -1,13 +1,13 @@
-//import userEvent from "@testing-library/user-event";
 import CharacterCard from "./CharacterCard";
+import "../styles/ListCharacter.scss";
 
 function ListCharacter(props) {
   const charElements = props.dataChar.map((dataChar, index) => {
     return <CharacterCard user={dataChar} key={index} />;
   });
   return (
-    <section>
-      <ul>{charElements}</ul>
+    <section className="listSection">
+      <ul className="listCha">{charElements}</ul>
     </section>
   );
 }

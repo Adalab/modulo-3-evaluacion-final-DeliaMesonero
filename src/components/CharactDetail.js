@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import "../styles/CharactDetail.scss";
 function CharactDetail(props) {
   return (
     <>

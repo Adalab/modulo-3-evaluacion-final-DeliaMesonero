@@ -59,7 +59,7 @@ function App() {
 
   return (
     <div className="App">
-      <header>
+      <header className="HeaderTitle">
         <h1> Harry Potter</h1>
       </header>
 
@@ -69,7 +69,7 @@ function App() {
           element={
             <>
               {" "}
-              <main>
+              <main className="main">
                 <Filters
                   filterByHouse={filterByHouse}
                   handleFilterByHouse={handleFilterByHouse}

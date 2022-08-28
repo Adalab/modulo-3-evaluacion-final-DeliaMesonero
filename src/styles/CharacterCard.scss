@@ -1,0 +1,34 @@
+.cardCha{
+    background-color: #d3a625;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: auto;
+    border:#740001 solid 5px;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: space-between;
+}
+.cardImg{
+    width: 200px;
+    height: 250px;
+    border-radius: 5px;
+}
+@media all and (max-width: 475px){
+    .cardImg{
+        width: 100px;
+    height: 135px;
+
+    }
+}
+.cardName{
+    color: rgb(65, 62, 62);
+    font-size: 18px;
+}
+.cardLink{
+    text-decoration: none;
+    
+}
+.cardSpecies{
+    color: rgb(65, 62, 62);
+    font-size: 18px;
+}
