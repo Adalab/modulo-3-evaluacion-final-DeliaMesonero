@@ -80,6 +80,9 @@ function App() {
             <>
               {" "}
               <main className="main">
+                <button className="btnReset" type="reset">
+                  Reset
+                </button>
                 <Filters
                   filterByHouse={filterByHouse}
                   handleFilterByHouse={handleFilterByHouse}
@@ -87,7 +90,6 @@ function App() {
                   handleFilterName={handleFilterName}
                   filterByGender={filterByGender}
                   handleFilterByGender={handleFilterByGender}
-                  //nameFilter={nameFilter}
                 />
 
                 <ListCharacter
@@ -96,8 +98,8 @@ function App() {
                   filterName={filterName}
                   //nameFilter={nameFilter}
                   handleFilterName={handleFilterName}
-                  //filterByGender={filterByGender}
-                  //handleFilterByGender={handleFilterByGender}
+                  filterByGender={filterByGender}
+                  handleFilterByGender={handleFilterByGender}
                 />
               </main>
             </>

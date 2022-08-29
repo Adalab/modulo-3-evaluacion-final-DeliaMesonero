@@ -12,7 +12,8 @@ function FilterName(props) {
           type="text"
           name="character"
           id="character"
-          value={props.FilterName}
+          placeholder="Harry Potter"
+          value={props.filterName}
           onChange={props.handleFilterName}
         />
       </label>
