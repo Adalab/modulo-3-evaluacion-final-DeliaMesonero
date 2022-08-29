@@ -43,7 +43,7 @@ function App() {
       if (filterByGender === "all") {
         return true;
       } else {
-        return user.house === filterByGender;
+        return user.gender === filterByGender;
       }
     });
 
@@ -53,9 +53,6 @@ function App() {
   const handleFilterByGender = (value) => {
     setFilterByGender(value);
   };
-  //const nameFilter = dataChar.filter((user) => {
-  //return user.name.toLowerCase().includes(filterName.toLowerCase());
-  //});
 
   //detalle personaje
 

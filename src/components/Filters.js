@@ -5,7 +5,7 @@ import FilterByGender from "./FilterByGender";
 function Filters(props) {
   return (
     <>
-      <form>
+      <form className="formName">
         <FilterByHouse
           filterByHouse={props.filterByHouse}
           handleFilterByHouse={props.handleFilterByHouse}
@@ -16,7 +16,7 @@ function Filters(props) {
         />
         <FilterByGender
           filterByGender={props.filterByGender}
-          handleFilterByGenderr={props.handleFilterByGender}
+          handleFilterByGender={props.handleFilterByGender}
         />
       </form>
     </>

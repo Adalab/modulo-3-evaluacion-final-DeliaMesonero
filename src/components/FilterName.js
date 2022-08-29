@@ -4,20 +4,18 @@ function FilterName(props) {
     props.handleFilterName(ev.taget.value);
   };
   return (
-    <form className="formName">
-      <label className="formLabel" htmlFor="character">
-        Buscar por personaje
-        <input
-          className="inputChar"
-          type="text"
-          name="character"
-          id="character"
-          placeholder="Harry Potter"
-          value={props.filterName}
-          onChange={props.handleFilterName}
-        />
-      </label>
-    </form>
+    <label className="formLabel" htmlFor="character">
+      Buscar por personaje
+      <input
+        className="inputChar"
+        type="text"
+        name="character"
+        id="character"
+        placeholder="Harry Potter"
+        value={props.filterName}
+        onChange={props.handleFilterName}
+      />
+    </label>
   );
 }
 export default FilterName;

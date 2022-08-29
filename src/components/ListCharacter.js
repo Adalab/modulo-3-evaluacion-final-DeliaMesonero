@@ -7,7 +7,11 @@ function ListCharacter(props) {
   });
   return (
     <section className="listSection">
-      <ul className="listCha">{charElements}</ul>
+      {charElements.length === 0 ? (
+        <p className="errorMsj">No existe ese personaje</p>
+      ) : (
+        <ul className="listCha">{charElements}</ul>
+      )}
     </section>
   );
 }
