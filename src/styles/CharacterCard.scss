@@ -23,6 +23,7 @@
 .cardName{
     color: rgb(65, 62, 62);
     font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .cardLink{
     text-decoration: none;
@@ -31,4 +32,6 @@
 .cardSpecies{
     color: rgb(65, 62, 62);
     font-size: 18px;
+    text-transform: capitalize;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }

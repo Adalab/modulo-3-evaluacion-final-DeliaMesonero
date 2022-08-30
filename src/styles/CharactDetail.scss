@@ -41,6 +41,7 @@ background-color:#d3a625;
 font-family: Georgia, 'Times New Roman', Times, serif;
 color:#740001;
 font-weight: bold;
+text-transform: capitalize;
 
 }
 .back{
@@ -64,5 +65,17 @@ font-weight: bold;
     
 }
 .fa-solid{
+    
+}
+.ImgHouse{
+    margin-left: 40px;
+    margin-top: 30px;
+    width: 100px;
+    height: 120px;
+    position: absolute;
+}
+.detailSatatus{
+    display: flex;
+    flex-direction: row;
     
 }
