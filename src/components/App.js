@@ -45,6 +45,15 @@ function App() {
       } else {
         return user.gender === filterByGender;
       }
+    })
+    .sort((a, b) => {
+      if (a.name > b.name) {
+        return 1;
+      }
+      if (a.name < b.name) {
+        return -1;
+      }
+      return 0;
     });
 
   const handleFilterName = (ev) => {

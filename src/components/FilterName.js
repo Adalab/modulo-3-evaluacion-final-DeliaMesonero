@@ -7,6 +7,9 @@ function FilterName(props) {
     <label className="formLabel" htmlFor="character">
       Buscar por personaje
       <input
+        onKeyPress={(e) => {
+          e.key === "Enter" && e.preventDefault();
+        }}
         className="inputChar"
         type="text"
         name="character"

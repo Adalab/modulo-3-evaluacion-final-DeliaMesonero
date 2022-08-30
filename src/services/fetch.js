@@ -6,7 +6,7 @@ function getDataApi() {
         return {
           image:
             user.image === ""
-              ? "https://via.placeholder.com/210x295/ffffff/666666/?text=HarryPotter"
+              ? "//via.placeholder.com/210x295/ffffff/666666/?text=HarryPotter"
               : user.image,
           name: user.name,
           species: user.species,
