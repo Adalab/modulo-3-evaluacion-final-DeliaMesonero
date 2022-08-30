@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.a54e2f38.css",
-    "main.js": "./static/js/main.91034fd9.js",
+    "main.css": "./static/css/main.76cd65c2.css",
+    "main.js": "./static/js/main.aaddee81.js",
+    "static/media/Slytherin.jpg": "./static/media/Slytherin.76fb651d211e14fc0963.jpg",
+    "static/media/hufflepuff.jpg": "./static/media/hufflepuff.e8f25d1486db1b6173b5.jpg",
+    "static/media/ravenclaw.jpg": "./static/media/ravenclaw.22defabdfdeb938614cb.jpg",
+    "static/media/gryf.jpg": "./static/media/gryf.46c4b8e2717fc004be5c.jpg",
     "index.html": "./index.html",
-    "main.a54e2f38.css.map": "./static/css/main.a54e2f38.css.map",
-    "main.91034fd9.js.map": "./static/js/main.91034fd9.js.map"
+    "main.76cd65c2.css.map": "./static/css/main.76cd65c2.css.map",
+    "main.aaddee81.js.map": "./static/js/main.aaddee81.js.map"
   },
   "entrypoints": [
-    "static/css/main.a54e2f38.css",
-    "static/js/main.91034fd9.js"
+    "static/css/main.76cd65c2.css",
+    "static/js/main.aaddee81.js"
   ]
 }
